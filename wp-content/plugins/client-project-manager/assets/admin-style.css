@@ -1,0 +1,142 @@
+/* Client Project Manager - Admin Styles */
+
+/* Admin columns styling */
+.wp-list-table .column-client_name {
+    width: 20%;
+}
+
+.wp-list-table .column-project_status {
+    width: 15%;
+}
+
+.wp-list-table .column-project_deadline {
+    width: 15%;
+}
+
+/* Status indicators in admin columns */
+.wp-list-table .status-pending {
+    background-color: #fef3cd;
+    color: #856404;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.wp-list-table .status-in-progress {
+    background-color: #cff4fc;
+    color: #055160;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.wp-list-table .status-completed {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Meta box styling */
+#client_project_details .form-table th {
+    width: 150px;
+    font-weight: 600;
+}
+
+#client_project_details .form-table td input,
+#client_project_details .form-table td select {
+    width: 100%;
+    max-width: 300px;
+}
+
+#client_project_details .form-table td input[type="date"] {
+    max-width: 200px;
+}
+
+/* Dashboard widget styling */
+.client-projects-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.client-projects-stats .stat-item {
+    text-align: center;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    border-left: 4px solid #0073aa;
+}
+
+.client-projects-stats .stat-number {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0073aa;
+    margin-bottom: 5px;
+}
+
+.client-projects-stats .stat-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Responsive admin styles */
+@media (max-width: 782px) {
+    .client-projects-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .wp-list-table .column-client_name,
+    .wp-list-table .column-project_status,
+    .wp-list-table .column-project_deadline {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .client-projects-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional admin enhancements */
+.post-type-client_project .page-title-action {
+    background: #0073aa;
+    border-color: #0073aa;
+}
+
+.post-type-client_project .page-title-action:hover {
+    background: #005177;
+    border-color: #005177;
+}
+
+/* Form validation styles */
+.client-project-meta input:invalid {
+    border-color: #dc3232;
+    box-shadow: 0 0 0 1px #dc3232;
+}
+
+.client-project-meta .required::after {
+    content: " *";
+    color: #dc3232;
+}
+
+/* Help text styling */
+.client-project-help {
+    font-style: italic;
+    color: #666;
+    font-size: 13px;
+    margin-top: 5px;
+}

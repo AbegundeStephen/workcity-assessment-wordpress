@@ -1,0 +1,186 @@
+/* Client Project Manager - Frontend Styles */
+
+.client-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.project-title {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.project-meta {
+    margin-bottom: 15px;
+}
+
+.project-meta p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-badge.status-pending {
+    background-color: #fef3cd;
+    color: #856404;
+}
+
+.status-badge.status-in-progress {
+    background-color: #cff4fc;
+    color: #055160;
+}
+
+.status-badge.status-completed {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.project-excerpt {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: #0073aa;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #005177;
+    color: white;
+}
+
+/* Single project page styles */
+.single-client_project .entry-content {
+    max-width: 800px;
+}
+
+.project-details-meta {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.project-details-meta h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.project-details-meta .meta-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.project-details-meta .meta-label {
+    font-weight: bold;
+    width: 120px;
+    color: #333;
+}
+
+.project-details-meta .meta-value {
+    color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .client-projects-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .project-card {
+        padding: 15px;
+    }
+    
+    .project-details-meta .meta-row {
+        flex-direction: column;
+    }
+    
+    .project-details-meta .meta-label {
+        width: auto;
+        margin-bottom: 5px;
+    }
+}
+
+/* Archive page styles */
+.archive.post-type-archive-client_project .site-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.archive.post-type-archive-client_project .page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Filter form styles (if you add filtering later) */
+.project-filters {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.project-filters .filter-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-filters select,
+.project-filters input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.project-filters button {
+    background: #0073aa;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.project-filters button:hover {
+    background: #005177;
+}
